@@ -60,7 +60,7 @@ useEffect(() => {
 
 <Path/>
 <Alert />
-
+<Sidebar />
 <Cart />
 <Routes>
 <Route path='/register' element={<Register /> }/>
@@ -72,8 +72,6 @@ useEffect(() => {
 
 
 
-
-    <Sidebar />
 
 
     

@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import {connect} from 'react-redux'
 import { toggle_cart } from '../../state/action-creators/toggle';
 import { toggle_overlay } from '../../state/action-creators/toggle';
-
+import { toggle_sidebar } from '../../state/action-creators/toggle';
 import Badge from '@mui/material/Badge';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import {AiOutlineShoppingCart} from 'react-icons/ai'
-const Header = ({cart, authenticate, toggle_cart ,toggleCart, toggle_overlay, toggleOverlay}) => {
+const Header = ({cart, authenticate, toggle_cart ,toggleCart, toggle_overlay,toggle_sidebar, toggleOverlay}) => {
   const theme = createTheme({
     components: {
       MuiBadge: {
@@ -31,7 +31,7 @@ const Header = ({cart, authenticate, toggle_cart ,toggleCart, toggle_overlay, to
 
 
 
-        <div id="humbtn" class="header__humburger hide-for-desktop">
+        <div onClick={() => toggle_sidebar(true)} id="humbtn" class="header__humburger hide-for-desktop">
           <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd" />
           </svg>
@@ -95,25 +95,7 @@ const Header = ({cart, authenticate, toggle_cart ,toggleCart, toggle_overlay, to
       
 
 
-      <div class="sidebar">
-        <div>
-
-          <div id="closebtn" class="sidebar__closebtn">
-            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-                fill="#69707D" fill-rule="evenodd" />
-            </svg>
-          </div>
-
-          <a href="">Collections</a>
-          <a href="">Men</a>
-          <a href="">Women</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-        </div>
-
-      </div>
+   
 
 
 
@@ -129,4 +111,4 @@ const mapStateToProps = state =>({
   toggleOverlay: state.toggle.toggleOverlay,
 })
 
-export default connect(mapStateToProps,{toggle_cart, toggle_overlay})(Header)
+export default connect(mapStateToProps,{toggle_cart, toggle_overlay,  toggle_sidebar})(Header)

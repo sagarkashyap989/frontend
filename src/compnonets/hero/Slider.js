@@ -3,7 +3,7 @@ import React from 'react'
 const Slider = ({img}) => {
   // console.log(img[0])
   return (
-    <div className="hide-for-mobile">
+    <div className="hide-for-mobile ">
 
       <div class="hero__col1 hero__grid "    id="showSlideBtn">
         {/* <div class="hero__grid__col1"></div> */}

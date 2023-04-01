@@ -1,5 +1,11 @@
 import axios from 'axios'
 
+export const toggle_sidebar = (state) => dispatch =>{
+    dispatch({
+        type:'TOGGLE_SIDEBAR',
+        payload:state
+    })
+}
 
 export const toggle_overlay =(state) =>  dispatch =>{
     
