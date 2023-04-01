@@ -15,11 +15,11 @@ const Sidebar = ({toggle_sidebar, toggleSidebar}) => {
         </svg>
       </div>
 
-      <Link to='/' href="">Collections</Link>
-      <Link to='/' href="">Men</Link>
-      <Link to='/' href="">Women</Link>
-      <Link to='/' href="">About</Link>
-      <Link to='/' href="">Contact</Link>
+      <Link onClick={() => toggle_sidebar(false)} to='/' href="">Collections</Link>
+      <Link onClick={() => toggle_sidebar(false)} to='/' href="">Men</Link>
+      <Link onClick={() => toggle_sidebar(false)} to='/' href="">Women</Link>
+      <Link onClick={() => toggle_sidebar(false)} to='/' href="">About</Link>
+      <Link onClick={() => toggle_sidebar(false)} to='/' href="">Contact</Link>
     </div>
 
   </div>

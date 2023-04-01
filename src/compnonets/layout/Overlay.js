@@ -4,8 +4,8 @@ import { toggle_cart, toggle_overlay} from '../../state/action-creators/toggle'
 const Overlay = ({toggle_cart, toggle_overlay, toggleCart, toggleOverlay }) => {
   return (
     <div onClick={() =>{
-        toggle_cart(!toggleCart);
-        toggle_overlay(!toggleOverlay);
+        toggle_cart(false);
+        toggle_overlay(false);
     }} id="overlay" className={`${toggleOverlay ?  'overlay':''} fixed`}></div>
   )
 }

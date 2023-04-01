@@ -15,7 +15,7 @@ const Size = ({currentSize, handleSize}) => {
       <div className="my-6">
       <div className="size_unit flex justify-between mb-5">
             <h3 className='text-[#95a0ab] text-[18px]'>Shoe Size <span>(UK)</span></h3>
-            <a href="/" className='underline  text-[15px] '>Si ze chart</a>
+            <a href="/" className='underline  text-[15px] '>Size chart</a>
         </div>
 
         <div className="flex gap-[0.7rem] my-3">
