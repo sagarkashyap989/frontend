@@ -9,7 +9,7 @@ export const load_products =() => async dispatch =>{
             type: PRODUCT_LOADED,
             payload: res.data
         })
-        console.log(res.data)
+        // console.log(res.data)
     } catch (error) {
         console.log(error);
 

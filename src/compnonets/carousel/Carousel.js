@@ -10,7 +10,7 @@ const Carousel = ({slideDuration, autoPlay, showBullets ,showNavs, images }) => 
 
   return (
     <section class={`carousel m-w-[801px]  carousel hide-for-desktop md:hidden `}>
-    {console.log(images, 'imagesds')}
+    {/* {console.log(images, 'imagesds')} */}
 <div>
       <SimpleImageSlider
         height={317}

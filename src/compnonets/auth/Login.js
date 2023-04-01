@@ -16,7 +16,7 @@ const Login = ({setAlert, login, isAuthenticate , setPath}) => {
 
   useEffect(() => {
  setPath({con:'Login', path:'/login'})
-  }, [])
+  }, [window.location.pathname])
   
 
   console.log("isAuthenticate", isAuthenticate)

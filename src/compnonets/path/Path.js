@@ -6,7 +6,7 @@ const Path = ({path}) => {
   useEffect(() => {
     console.log(window.location.pathname); //yields: "/js" (where snippets run)
     console.log(window.location.href); 
-  }, [window.location.href])
+  }, [window.location.pathname])
   
 
   return (

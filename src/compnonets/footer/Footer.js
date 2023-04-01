@@ -12,7 +12,7 @@ const Footer = () => {
         
         {links.map((link, index)=>{
           const {title, content} = link;
-          console.log(content)
+          {/* console.log(content) */}
           return(
            
      <div className={`flex flex-col  ${index===2? "max-w-[100%] ":" w-1/2 md:max-w-max "}space-y-5 mb-6`} > 

@@ -63,7 +63,7 @@ const Lists = ({products, drag }) => {
             products.map((product, index)=>{
                 const {brand, disc, discount, images, likes, name, price, reviews, size, stock,_id } = product;
                 return (
-<Link to={`/product/${_id}`}>
+                    _id? (<Link to={`/product/${_id}`}>
 <div className='space-y-2 px-4'>
 
 <div className="max-w-[220px] max-h-[220px]">
@@ -75,9 +75,10 @@ const Lists = ({products, drag }) => {
     <div className="item_name ">{name}</div>
 </div>
 
-<div className="price">₹ {price}</div>
+<div className="price">$ {price}</div>
 </div>
-</Link>
+</Link>):(<h2>not loaded</h2>)
+
                 )
             })
         }

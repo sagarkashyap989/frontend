@@ -18,7 +18,7 @@ const Login = ({ setAlert, login, isAuthenticate , setPath}) => {
 
   useEffect(() => {
     setPath({con:'Dashoard', path:'/dashboard'})
-     }, [])
+     }, [window.location.pathname])
   const list = ['Orders', 'Addresses', 'Account Details', 'Log Out']
 
   return (

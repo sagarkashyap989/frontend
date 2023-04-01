@@ -17,7 +17,7 @@ const Register = ({setAlert, isAuthenticate,register, setPath} ) => {
  
   useEffect(() => {
     setPath({con:'Register', path:'/register'})
-     }, [])
+     }, [window.location.pathname])
  
   const [formData, setFromData] = useState({
     username:'',
@@ -39,7 +39,7 @@ const onChange= (e) =>{
 
 
 const handleSubmit = (e) =>{
-  // e.preventDefault();
+  e.preventDefault();
   
   if(password !== password2){
     console.log(password, ",", password2)

@@ -22,7 +22,7 @@ const Hero = ({ products, liked_id, isAuthenticate, loading, addCart, setPathPro
 
   useEffect(() => {
     setPathProduct({con:name, path:`/product/{u_id}`})
-  }, [products])
+  }, [window.location.pathname])
   
 
   if(loading ){
@@ -34,20 +34,20 @@ const Hero = ({ products, liked_id, isAuthenticate, loading, addCart, setPathPro
   let isLiked = false;
    
     
-  console.log(products)
-  console.log(product)
+  // console.log(products)
+  // console.log(product)
   
   
-  console.log(images)
-  console.log(isAuthenticate, liked_id, "ldskfjdklfsj;")
+  // console.log(images)
+  // console.log(isAuthenticate, liked_id, "ldskfjdklfsj;")
   if (isAuthenticate && likes) {
-    console.log(likes)
+    // console.log(likes)
     const liked = likes.find(item => item.user === liked_id._id);
     if (liked) {
       isLiked = true;
     }
-    console.log(liked)
-    console.log(isLiked)
+    // console.log(liked)
+    // console.log(isLiked)
   }
  
 
@@ -66,7 +66,31 @@ const Hero = ({ products, liked_id, isAuthenticate, loading, addCart, setPathPro
   return (loading && products !==null) ?(<Spinner/>):( 
     <>
       <Carousel showBullets={true} slideDuration={0.5} autoPlay={false} showNavs={true} images={images}/>
-      
+      <main class="hero container__x relative">
+
+<div className=" justify-center w-[100%] flex gap-6">
+
+<Slider img={images} />
+
+
+<div class="hero__col2">
+
+
+<Iteminfo brand={brand} id={_id} name={name} price={price} discount={discount} liked={isLiked} />
+
+
+<Size currentSize={currentSize} handleQuantity={handleQuantity} handleSize={handleSize} />
+
+
+<Price quantity={currentQuantity} handleQuantity={handleQuantity}  handleSubmit={handleSubmit}/>
+
+
+
+</div>
+
+</div>
+
+</main>
     </>
   ) }
 

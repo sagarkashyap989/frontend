@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Slider = ({img}) => {
-  console.log(img[0])
+  // console.log(img[0])
   return (
     <div className="hide-for-mobile">
 
