@@ -76,14 +76,14 @@ const handleSubmit = (e) =>{
       <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
         Password
       </label>
-      <input name='password' value={password} onChange={e=> onChange(e)}  class={`shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline  ${passwordErr? "border-red-600": ""}`} id="password" placeholder="******************" />
+      <input  type="password"name='password' value={password} onChange={e=> onChange(e)}  class={`shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline  ${passwordErr? "border-red-600": ""}`} id="password" placeholder="******************" />
       {/* <p class="text-red-500 text-xs italic">Please choose a password.</p> */}
     </div>
     <div class="mb-6">
       <label  class="block text-gray-700 text-sm font-bold mb-2" for="password">
        Confirm Password
       </label>
-      <input   name='password2' value={password2} onChange={e=> onChange(e)}  class={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline  ${passwordErr? "border-red-600": ""}`} id="password2" placeholder="******************" />
+      <input  type="password"  name='password2' value={password2} onChange={e=> onChange(e)}  class={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline  ${passwordErr? "border-red-600": ""}`} id="password2" placeholder="******************" />
       { passwordErr? <p class="text-red-500 text-xs italic">Please choose a password.</p> : ""}
     </div>
     <div class="flex items-center justify-between">

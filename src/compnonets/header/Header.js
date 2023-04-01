@@ -50,7 +50,7 @@ const Header = ({cart, authenticate, toggle_cart ,toggleCart, toggle_overlay,tog
 
         <div class="header__menu hide-for-mobile">
 
-        <Link to='/' href="">Collections</Link>
+      <Link to='/' href="">Collections</Link>
       <Link to='/' href="">Men</Link>
       <Link to='/' href="">Women</Link>
       <Link to='/' href="">About</Link>
