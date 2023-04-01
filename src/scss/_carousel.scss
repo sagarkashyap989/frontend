@@ -1,0 +1,104 @@
+@use './utils/' as u;
+
+.carousel {
+
+    // background-color: red;
+    background-color: white;
+    @include u.breakpoint-up(medium) {
+    }
+
+
+    div {
+
+        // background-color: red;
+        background-color: white;
+
+
+        button{
+            img{
+                filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(82deg) brightness(99%) contrast(103%) !important;
+            }
+        }
+
+        div {
+            width: 100%;
+            max-width: 801px;
+            // margin:0 !important;
+            margin:auto !important;
+            background-position: center !important;
+            background-size: 70% !important;
+            background-repeat: no-repeat;
+            button:first-child {
+                left: 11px;
+            }
+
+            div:last-child {
+                left:0% !important;
+                display:flex !important;
+                justify-content: center !important;
+               
+            }   
+
+        }
+    }
+
+
+
+
+    &__prev {
+        top: calc(50% - 20px);
+        position: absolute;
+        left: 20px;
+        background: black;
+        padding: 20px;
+        border-radius: 50%;
+        opacity: 0.8;
+        transition: opacity 150ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+
+        }
+
+        svg {
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__next {
+        top: calc(50% - 20px);
+        position: absolute;
+        right: 20px;
+        background: black;
+        padding: 20px;
+        border-radius: 50%;
+        opacity: 0.8;
+        transition: opacity 150ms ease-in-out;
+
+
+        &:hover {
+            opacity: 1;
+
+        }
+
+        svg {
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+
+
+
+}

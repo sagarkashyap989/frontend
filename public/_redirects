@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+[[redirects]]
+ /api/* https://sneaker-service.onrender.com/:splat 200
+/* /index.html 200
+=======
+/api/product https://sneaker-service.onrender.com/api/product/:splat 200!
+/* /index.html  200
+>>>>>>> fde481a7c3e328c370c53ce48c1a255c4f7eb460
