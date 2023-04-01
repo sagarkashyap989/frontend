@@ -50,11 +50,11 @@ const Header = ({cart, authenticate, toggle_cart ,toggleCart, toggle_overlay,tog
 
         <div class="header__menu hide-for-mobile">
 
-          <a href="#">Collections</a>
-          <a href="">Men</a>
-          <a href="">Women</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
+        <Link to='/' href="">Collections</Link>
+      <Link to='/' href="">Men</Link>
+      <Link to='/' href="">Women</Link>
+      <Link to='/' href="">About</Link>
+      <Link to='/' href="">Contact</Link>
         </div>
 
         <div id="searchBtn" class="header__searchlogo">

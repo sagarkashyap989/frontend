@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { toggle_sidebar } from '../../state/action-creators/toggle'
+import {Link} from 'react-router-dom'
 const Sidebar = ({toggle_sidebar, toggleSidebar}) => {
   return (
     <div class={`sidebar ${toggleSidebar? 'w-[60%]': 'w-[0]'}`} >
@@ -14,11 +15,11 @@ const Sidebar = ({toggle_sidebar, toggleSidebar}) => {
         </svg>
       </div>
 
-      <a href="">Collections</a>
-      <a href="">Men</a>
-      <a href="">Women</a>
-      <a href="">About</a>
-      <a href="">Contact</a>
+      <Link to='/' href="">Collections</Link>
+      <Link to='/' href="">Men</Link>
+      <Link to='/' href="">Women</Link>
+      <Link to='/' href="">About</Link>
+      <Link to='/' href="">Contact</Link>
     </div>
 
   </div>
