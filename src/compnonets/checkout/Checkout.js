@@ -68,19 +68,19 @@ const Checkout = ({ address, cart, loading, cartDelete, setPath }) => {
 
                     <div className="flex justify-between text-[23px] my-[10px] ">
                         <p>Subtotal</p>
-                        <p>₹{subtotal}</p>
+                        <p>${subtotal}</p>
                     </div>
 
                     <div className="flex justify-between text-[23px] my-[10px] ">
                         <p>Shipping</p>
-                        <p>₹ {cart && shippingCharge}</p>
+                        <p>$ {cart && shippingCharge}</p>
                     </div>
 
                     <hr />
 
                     <div className="flex justify-between text-[26px] my-[15px]  ">
                         <p className='font-semibold'>Total</p>
-                        <p className='text-[28px] font-semibold'>₹ {cart && subtotal + shippingCharge}</p>
+                        <p className='text-[28px] font-semibold'>$ {cart && subtotal + shippingCharge}</p>
                     </div>
                     <div className='flex justify-center mt-6'>
             <button  disabled={(address && address.length !== 0) && (cart && cart.length !== 0) ? false: true} type='submit' className='bg-black text-white px-[9px] py-[14px] disabled:opacity-70'>Go to Payment</button>

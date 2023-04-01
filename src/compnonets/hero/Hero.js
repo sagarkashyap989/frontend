@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState, useCallback} from 'react'
 import Slider from './Slider'
 import Iteminfo from './Iteminfo'
 import Price from './Price'
@@ -11,6 +11,8 @@ import { setPathProduct } from '../../state/action-creators/path'
 import { useParams, Link } from 'react-router-dom'
 import Spinner from '../layout/spinner'
 import Carousel from '../carousel/Carousel'
+
+import { useDispatch, useSelector } from "react-redux";
 const Hero = ({ products, liked_id, isAuthenticate, loading, addCart, setPathProduct }) => {
   const [currentQuantity, setCurrentQuantity] = useState(1);
   const [totalItem, setTotalItem] = useState(0);
@@ -19,10 +21,12 @@ const Hero = ({ products, liked_id, isAuthenticate, loading, addCart, setPathPro
   const { id } = useParams()
   const product = products && products.find(element => element._id === id)
   const { brand, disc, discount, images, likes, name, price, reviews, size, stock, _id } = product ?? {};
-
+  const dispatch = useDispatch();
+  const stableDispatch = useCallback(dispatch, []);
+  
   useEffect(() => {
     setPathProduct({con:name, path:`/product/{u_id}`})
-  }, [window.location.pathname])
+  }, [window.location.pathname, stableDispatch])
   
 
   if(loading ){
