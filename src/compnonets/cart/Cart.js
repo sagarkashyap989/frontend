@@ -8,7 +8,7 @@ import { toggle_overlay } from '../../state/action-creators/toggle';
 import Spinner from './../layout/spinner'
 const Cart = ({ toggleCart, cart, loading, cartDelete, toggle_cart, toggle_overlay, }) => {
 
-    return loading && cart === null ? ( <Spinner />) : (<section id="cart" class={`cart space-y-4 ${toggleCart ? "" : 'hidden'} fixed`}>
+    return loading && cart === null ? ( <div className={`${toggleCart ? "" : 'hidden'}`} ><Spinner /></div>) : (<section id="cart" class={`cart space-y-4 ${toggleCart ? "" : 'hidden'} fixed`}>
 
 
 
