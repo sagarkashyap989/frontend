@@ -11,7 +11,7 @@ export default function ( state= initialState, action) {
             return {...state, toggleSidebar: payload, toggleOverlay: payload}
         case 'TOGGLE_OVERLAY':
             console.log(payload)
-            return{...state, toggleOverlay: payload, toggleSidebar:payload} 
+            return{...state, toggleOverlay: payload, toggleSidebar:false} 
           
         case 'TOGGLE_CART':
             console.log(payload)
